@@ -1,10 +1,3 @@
-//
-//  HelloWorldTests.swift
-//  HelloWorldTests
-//
-//  Created by Telekomlab6 on 04.10.23.
-//
-
 import XCTest
 @testable import HelloWorld
 
