@@ -7,30 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F04A0822AE27F6400C0EFBA /* WienerLinienAbfahrtIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A0812AE27F6400C0EFBA /* WienerLinienAbfahrtIOSApp.swift */; };
-		3F04A0842AE27F6400C0EFBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A0832AE27F6400C0EFBA /* ContentView.swift */; };
-		3F04A0862AE27F6900C0EFBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F04A0852AE27F6900C0EFBA /* Assets.xcassets */; };
-		3F04A0892AE27F6900C0EFBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F04A0882AE27F6900C0EFBA /* Preview Assets.xcassets */; };
-		3F04A0932AE2818A00C0EFBA /* ODPRealtimeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A08F2AE2818900C0EFBA /* ODPRealtimeAPIClient.swift */; };
-		3F04A0942AE2818A00C0EFBA /* LineStopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A0902AE2818900C0EFBA /* LineStopsView.swift */; };
-		3F04A0952AE2818A00C0EFBA /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A0912AE2818900C0EFBA /* Location.swift */; };
-		3F04A0962AE2818A00C0EFBA /* ODPRealtimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04A0922AE2818A00C0EFBA /* ODPRealtimeModel.swift */; };
+		CE026F0D2AE29D880017771E /* WienerLinienAbfahrtIOS2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F0C2AE29D880017771E /* WienerLinienAbfahrtIOS2App.swift */; };
+		CE026F0F2AE29D880017771E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F0E2AE29D880017771E /* ContentView.swift */; };
+		CE026F112AE29D8A0017771E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE026F102AE29D8A0017771E /* Assets.xcassets */; };
+		CE026F142AE29D8A0017771E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE026F132AE29D8A0017771E /* Preview Assets.xcassets */; };
+		CE026F262AE29E5F0017771E /* ODPRealtimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F222AE29E5F0017771E /* ODPRealtimeModel.swift */; };
+		CE026F272AE29E5F0017771E /* ODPRealtimeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F232AE29E5F0017771E /* ODPRealtimeAPIClient.swift */; };
+		CE026F282AE29E5F0017771E /* LineStopsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F242AE29E5F0017771E /* LineStopsView.swift */; };
+		CE026F292AE29E5F0017771E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F252AE29E5F0017771E /* Location.swift */; };
+		CE026F2B2AE2AE320017771E /* PublicTransportLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */; };
+		CE026F2D2AE2B2B10017771E /* PublicTransportRouteAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F04A07E2AE27F6400C0EFBA /* WienerLinienAbfahrtIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WienerLinienAbfahrtIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F04A0812AE27F6400C0EFBA /* WienerLinienAbfahrtIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WienerLinienAbfahrtIOSApp.swift; sourceTree = "<group>"; };
-		3F04A0832AE27F6400C0EFBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		3F04A0852AE27F6900C0EFBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3F04A0882AE27F6900C0EFBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3F04A08F2AE2818900C0EFBA /* ODPRealtimeAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODPRealtimeAPIClient.swift; sourceTree = "<group>"; };
-		3F04A0902AE2818900C0EFBA /* LineStopsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStopsView.swift; sourceTree = "<group>"; };
-		3F04A0912AE2818900C0EFBA /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		3F04A0922AE2818A00C0EFBA /* ODPRealtimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODPRealtimeModel.swift; sourceTree = "<group>"; };
+		CE026F092AE29D880017771E /* WienerLinienAbfahrtIOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WienerLinienAbfahrtIOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE026F0C2AE29D880017771E /* WienerLinienAbfahrtIOS2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WienerLinienAbfahrtIOS2App.swift; sourceTree = "<group>"; };
+		CE026F0E2AE29D880017771E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE026F102AE29D8A0017771E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE026F132AE29D8A0017771E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CE026F222AE29E5F0017771E /* ODPRealtimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODPRealtimeModel.swift; sourceTree = "<group>"; };
+		CE026F232AE29E5F0017771E /* ODPRealtimeAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ODPRealtimeAPIClient.swift; sourceTree = "<group>"; };
+		CE026F242AE29E5F0017771E /* LineStopsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStopsView.swift; sourceTree = "<group>"; };
+		CE026F252AE29E5F0017771E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportLine.swift; sourceTree = "<group>"; };
+		CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportRouteAssociation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F04A07B2AE27F6400C0EFBA /* Frameworks */ = {
+		CE026F062AE29D880017771E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,41 +44,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F04A0752AE27F6400C0EFBA = {
+		CE026F002AE29D880017771E = {
 			isa = PBXGroup;
 			children = (
-				3F04A0802AE27F6400C0EFBA /* WienerLinienAbfahrtIOS */,
-				3F04A07F2AE27F6400C0EFBA /* Products */,
+				CE026F0B2AE29D880017771E /* WienerLinienAbfahrtIOS2 */,
+				CE026F0A2AE29D880017771E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3F04A07F2AE27F6400C0EFBA /* Products */ = {
+		CE026F0A2AE29D880017771E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F04A07E2AE27F6400C0EFBA /* WienerLinienAbfahrtIOS.app */,
+				CE026F092AE29D880017771E /* WienerLinienAbfahrtIOS2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3F04A0802AE27F6400C0EFBA /* WienerLinienAbfahrtIOS */ = {
+		CE026F0B2AE29D880017771E /* WienerLinienAbfahrtIOS2 */ = {
 			isa = PBXGroup;
 			children = (
-				3F04A0902AE2818900C0EFBA /* LineStopsView.swift */,
-				3F04A0912AE2818900C0EFBA /* Location.swift */,
-				3F04A08F2AE2818900C0EFBA /* ODPRealtimeAPIClient.swift */,
-				3F04A0922AE2818A00C0EFBA /* ODPRealtimeModel.swift */,
-				3F04A0812AE27F6400C0EFBA /* WienerLinienAbfahrtIOSApp.swift */,
-				3F04A0832AE27F6400C0EFBA /* ContentView.swift */,
-				3F04A0852AE27F6900C0EFBA /* Assets.xcassets */,
-				3F04A0872AE27F6900C0EFBA /* Preview Content */,
+				CE026F242AE29E5F0017771E /* LineStopsView.swift */,
+				CE026F252AE29E5F0017771E /* Location.swift */,
+				CE026F232AE29E5F0017771E /* ODPRealtimeAPIClient.swift */,
+				CE026F222AE29E5F0017771E /* ODPRealtimeModel.swift */,
+				CE026F0C2AE29D880017771E /* WienerLinienAbfahrtIOS2App.swift */,
+				CE026F0E2AE29D880017771E /* ContentView.swift */,
+				CE026F102AE29D8A0017771E /* Assets.xcassets */,
+				CE026F122AE29D8A0017771E /* Preview Content */,
+				CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */,
+				CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */,
 			);
-			path = WienerLinienAbfahrtIOS;
+			path = WienerLinienAbfahrtIOS2;
 			sourceTree = "<group>";
 		};
-		3F04A0872AE27F6900C0EFBA /* Preview Content */ = {
+		CE026F122AE29D8A0017771E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				3F04A0882AE27F6900C0EFBA /* Preview Assets.xcassets */,
+				CE026F132AE29D8A0017771E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -82,39 +88,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F04A07D2AE27F6400C0EFBA /* WienerLinienAbfahrtIOS */ = {
+		CE026F082AE29D880017771E /* WienerLinienAbfahrtIOS2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F04A08C2AE27F6900C0EFBA /* Build configuration list for PBXNativeTarget "WienerLinienAbfahrtIOS" */;
+			buildConfigurationList = CE026F172AE29D8A0017771E /* Build configuration list for PBXNativeTarget "WienerLinienAbfahrtIOS2" */;
 			buildPhases = (
-				3F04A07A2AE27F6400C0EFBA /* Sources */,
-				3F04A07B2AE27F6400C0EFBA /* Frameworks */,
-				3F04A07C2AE27F6400C0EFBA /* Resources */,
+				CE026F052AE29D880017771E /* Sources */,
+				CE026F062AE29D880017771E /* Frameworks */,
+				CE026F072AE29D880017771E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WienerLinienAbfahrtIOS;
-			productName = WienerLinienAbfahrtIOS;
-			productReference = 3F04A07E2AE27F6400C0EFBA /* WienerLinienAbfahrtIOS.app */;
+			name = WienerLinienAbfahrtIOS2;
+			productName = WienerLinienAbfahrtIOS2;
+			productReference = CE026F092AE29D880017771E /* WienerLinienAbfahrtIOS2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3F04A0762AE27F6400C0EFBA /* Project object */ = {
+		CE026F012AE29D880017771E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					3F04A07D2AE27F6400C0EFBA = {
-						CreatedOnToolsVersion = 15.0;
+					CE026F082AE29D880017771E = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 3F04A0792AE27F6400C0EFBA /* Build configuration list for PBXProject "WienerLinienAbfahrtIOS" */;
+			buildConfigurationList = CE026F042AE29D880017771E /* Build configuration list for PBXProject "WienerLinienAbfahrtIOS2" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,50 +128,51 @@
 				en,
 				Base,
 			);
-			mainGroup = 3F04A0752AE27F6400C0EFBA;
-			productRefGroup = 3F04A07F2AE27F6400C0EFBA /* Products */;
+			mainGroup = CE026F002AE29D880017771E;
+			productRefGroup = CE026F0A2AE29D880017771E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F04A07D2AE27F6400C0EFBA /* WienerLinienAbfahrtIOS */,
+				CE026F082AE29D880017771E /* WienerLinienAbfahrtIOS2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3F04A07C2AE27F6400C0EFBA /* Resources */ = {
+		CE026F072AE29D880017771E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F04A0892AE27F6900C0EFBA /* Preview Assets.xcassets in Resources */,
-				3F04A0862AE27F6900C0EFBA /* Assets.xcassets in Resources */,
+				CE026F142AE29D8A0017771E /* Preview Assets.xcassets in Resources */,
+				CE026F112AE29D8A0017771E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F04A07A2AE27F6400C0EFBA /* Sources */ = {
+		CE026F052AE29D880017771E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F04A0842AE27F6400C0EFBA /* ContentView.swift in Sources */,
-				3F04A0822AE27F6400C0EFBA /* WienerLinienAbfahrtIOSApp.swift in Sources */,
-				3F04A0952AE2818A00C0EFBA /* Location.swift in Sources */,
-				3F04A0942AE2818A00C0EFBA /* LineStopsView.swift in Sources */,
-				3F04A0962AE2818A00C0EFBA /* ODPRealtimeModel.swift in Sources */,
-				3F04A0932AE2818A00C0EFBA /* ODPRealtimeAPIClient.swift in Sources */,
+				CE026F2D2AE2B2B10017771E /* PublicTransportRouteAssociation.swift in Sources */,
+				CE026F272AE29E5F0017771E /* ODPRealtimeAPIClient.swift in Sources */,
+				CE026F0F2AE29D880017771E /* ContentView.swift in Sources */,
+				CE026F262AE29E5F0017771E /* ODPRealtimeModel.swift in Sources */,
+				CE026F282AE29E5F0017771E /* LineStopsView.swift in Sources */,
+				CE026F292AE29E5F0017771E /* Location.swift in Sources */,
+				CE026F2B2AE2AE320017771E /* PublicTransportLine.swift in Sources */,
+				CE026F0D2AE29D880017771E /* WienerLinienAbfahrtIOS2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3F04A08A2AE27F6900C0EFBA /* Debug */ = {
+		CE026F152AE29D8A0017771E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -198,8 +205,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -213,22 +219,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		3F04A08B2AE27F6900C0EFBA /* Release */ = {
+		CE026F162AE29D8A0017771E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -261,8 +265,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -270,24 +273,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		3F04A08D2AE27F6900C0EFBA /* Debug */ = {
+		CE026F182AE29D8A0017771E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WienerLinienAbfahrtIOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WienerLinienAbfahrtIOS2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wien.technikum.WienerLinienAbfahrtIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = wien.fhtw.WienerLinienAbfahrtIOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -308,14 +311,14 @@
 			};
 			name = Debug;
 		};
-		3F04A08E2AE27F6900C0EFBA /* Release */ = {
+		CE026F192AE29D8A0017771E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WienerLinienAbfahrtIOS/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WienerLinienAbfahrtIOS2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -328,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wien.technikum.WienerLinienAbfahrtIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = wien.fhtw.WienerLinienAbfahrtIOS2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,25 +342,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F04A0792AE27F6400C0EFBA /* Build configuration list for PBXProject "WienerLinienAbfahrtIOS" */ = {
+		CE026F042AE29D880017771E /* Build configuration list for PBXProject "WienerLinienAbfahrtIOS2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F04A08A2AE27F6900C0EFBA /* Debug */,
-				3F04A08B2AE27F6900C0EFBA /* Release */,
+				CE026F152AE29D8A0017771E /* Debug */,
+				CE026F162AE29D8A0017771E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F04A08C2AE27F6900C0EFBA /* Build configuration list for PBXNativeTarget "WienerLinienAbfahrtIOS" */ = {
+		CE026F172AE29D8A0017771E /* Build configuration list for PBXNativeTarget "WienerLinienAbfahrtIOS2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F04A08D2AE27F6900C0EFBA /* Debug */,
-				3F04A08E2AE27F6900C0EFBA /* Release */,
+				CE026F182AE29D8A0017771E /* Debug */,
+				CE026F192AE29D8A0017771E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3F04A0762AE27F6400C0EFBA /* Project object */;
+	rootObject = CE026F012AE29D880017771E /* Project object */;
 }
