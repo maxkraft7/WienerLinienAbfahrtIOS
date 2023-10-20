@@ -173,6 +173,10 @@ class ODPRealtimeClient {
 
         task.resume();
     }
+
+
+    // todo check how to read csv files:
+    // todo https://stackoverflow.com/questions/27206176/where-to-place-a-txt-file-and-read-from-it-in-a-ios-project
     
     private func fetchAsset(fileName: String) -> String? {
         if let csvURL = Bundle.main.url(forResource: fileName, withExtension: "csv") {
