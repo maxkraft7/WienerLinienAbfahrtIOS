@@ -33,32 +33,41 @@ class ODPRealtimeClient {
         var lines: [PublicTransportLine] = []
         let semaphore = DispatchSemaphore(value: 69)
         
-        
-        
-        self.fetchHTTP(url: URL(string: "https://www.wienerlinien.at/ogd_realtime/doku/ogd/wienerlinien-ogd-linien.csv")!) { webResponse in
-            let csvArr = self.fetchCSV(csv: webResponse)
-            
-            for lineArr in csvArr {
+        if let filepath = Bundle.main.path(forResource: "linien", ofType: "csv") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                let csvArr = self.fetchCSV(csv: contents)
                 
-                if lineArr.count < 2{
-                    continue
+                for lineArr in csvArr {
+                    
+                    if lineArr.count < 2{
+                        continue
+                    }
+                    
+                    let lineId = Int(lineArr[0])
+                    let name = lineArr[1]
+                    let type = lineArr[4].trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+                    
+                    if lineId == nil {
+                        continue
+                    }
+                    
+                    let line = PublicTransportLine(lineId: lineId!, name: name, type: type)
+                    lines.append(line)
                 }
                 
-                let lineId = Int(lineArr[0])
-                let name = lineArr[1]
-                let type = lineArr[4].trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-                
-                if lineId == nil {
-                    continue
+                semaphore.signal()
+                } catch {
+                    print("Error reading file linien.csv")
                 }
-                
-                let line = PublicTransportLine(lineId: lineId!, name: name, type: type)
-                lines.append(line)
-            }
-            
-            semaphore.signal()
-            
+            } else {
+                print("File not found")
         }
+        
+
+
+            
+        
         
         semaphore.wait()
         return lines
@@ -75,55 +84,75 @@ class ODPRealtimeClient {
         let semaphore = DispatchSemaphore(value: 0)
         var locations: [Location] = []
         
-        var assetString = self.fetchAsset(fileName: "haltepunkte.csv")
-        
-        self.fetchHTTP(url: URL(string: "https://www.wienerlinien.at/ogd_realtime/doku/ogd/wienerlinien-ogd-haltepunkte.csv")!) { webResponse in
-            let csvArr = self.fetchCSV(csv: webResponse)
-        
+        if let filepath = Bundle.main.path(forResource: "haltepunkte", ofType: "csv") {
+            do {
+                    let contents = try String(contentsOfFile: filepath)
+                let csvArr = self.fetchCSV(csv: contents)
             
-            for lineArray in csvArr {
                 
-                if lineArray.count < 2 {
-                    continue
+                for lineArray in csvArr {
+                    
+                    if lineArray.count < 2 {
+                        continue
+                    }
+                    
+                    let stopId = Int(lineArray[0])
+                    let name = lineArray[2]
+                    let longitude = Double(lineArray[5])
+                    
+                    // trim carriage return on line end
+                    let latitude = Double(lineArray[6].trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines))
+                    
+                    if longitude != nil && latitude != nil && stopId != nil {
+                        let location = Location(stopId: stopId!, name: name, coordinate: CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!))
+                        locations.append(location)
+                    }
                 }
                 
-                let stopId = Int(lineArray[0])
-                let name = lineArray[2]
-                let longitude = Double(lineArray[5])
-                
-                // trim carriage return on line end
-                let latitude = Double(lineArray[6].trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines))
-                
-                if longitude != nil && latitude != nil && stopId != nil {
-                    let location = Location(stopId: stopId!, name: name, coordinate: CLLocationCoordinate2D(latitude: latitude!, longitude: longitude!))
-                    locations.append(location)
+                semaphore.signal()
+                } catch {
+                    print("Error reading file BibleTable.csv")
                 }
-            }
-            
-            semaphore.signal()
+            } else {
+                print("File not found")
         }
         
         semaphore.wait()
-        return self.trimLocations( locations: locations, lines: lines, routeAssociations: routes, vehicleType: "ptMetro")
+        return self.trimLocations( locations: locations, lines: lines, routeAssociations: routes, vehicleType: "ptMetro")[PublicTransportLine(lineId: 301, name: "U1", type: "ptMetro")]!
     }
     
-    func trimLocations(locations: [Location], lines: [PublicTransportLine], routeAssociations: [PublicTransportRouteAssociation], vehicleType: String) -> [Location]{
+    func trimLocations(locations: [Location], lines: [PublicTransportLine], routeAssociations: [PublicTransportRouteAssociation], vehicleType: String) -> [PublicTransportLine: [Location]]{
         
-        var trimmedLocations: [Location] = []
+        // build up dicts
+        var myDictionary: [PublicTransportLine: [Location]] = [:]
         
-        for line in lines {
-            if line.type == vehicleType {
-                for routeAssociation in routeAssociations {
-                    for location in locations {
-                        if location.stopId == routeAssociation.stopId {
-                            trimmedLocations.append(location)
-                        }
-                    }
-                }
+        
+        for route in routeAssociations {
+            let lineID = route.lineId
+            let stopID = route.stopId
+
+            let line = lines.first{$0.lineId == lineID}
+            let stop = locations.first {$0.stopId == stopID}
+            
+            if line == nil || stop == nil {
+                continue
+            }
+            
+            if line?.type != vehicleType{
+                continue
+            }
+            
+            if var existingValues = myDictionary[line!] {
+                existingValues.append(stop!)
+                
+                // should set again.
+                myDictionary[line!] = existingValues
+            } else {
+                myDictionary[line!] = [stop!]
             }
         }
         
-        return trimmedLocations
+        return myDictionary
         
     }
 
@@ -133,26 +162,34 @@ class ODPRealtimeClient {
         
         var routeAssociations: [PublicTransportRouteAssociation] = []
         
-        self.fetchHTTP(url: URL(string: "https://www.wienerlinien.at/ogd_realtime/doku/ogd/wienerlinien-ogd-fahrwegverlaeufe.csv")!) { webResponse in
-            let csvArr = self.fetchCSV(csv: webResponse)
-        
-            for lineArray in csvArr {
-                
-                if lineArray.count < 4 {
-                    continue
-                }
-                
-                let lineId: Int? = Int(lineArray[0])
-                let stopId: Int? = Int(lineArray[3])
-                
-                if lineId != nil && stopId != nil {
-                    let routeAssociation: PublicTransportRouteAssociation = PublicTransportRouteAssociation(stopId: stopId!, lineId: lineId!)
-                    routeAssociations.append(routeAssociation)
-                }
-            }
+        if let filepath = Bundle.main.path(forResource: "routen", ofType: "csv") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                let csvArr = self.fetchCSV(csv: contents)
             
-            semaphore.signal()
+                for lineArray in csvArr {
+                    
+                    if lineArray.count < 4 {
+                        continue
+                    }
+                    
+                    let lineId: Int? = Int(lineArray[0])
+                    let stopId: Int? = Int(lineArray[3])
+                    
+                    if lineId != nil && stopId != nil {
+                        let routeAssociation: PublicTransportRouteAssociation = PublicTransportRouteAssociation(stopId: stopId!, lineId: lineId!)
+                        routeAssociations.append(routeAssociation)
+                    }
+                }
+                
+                semaphore.signal()
+                } catch {
+                    print("Error reading file routen.csv")
+                }
+            } else {
+                print("File not found")
         }
+        
 
         semaphore.wait()
         return routeAssociations

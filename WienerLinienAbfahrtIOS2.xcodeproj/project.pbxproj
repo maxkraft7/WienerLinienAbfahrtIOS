@@ -17,6 +17,10 @@
 		CE026F292AE29E5F0017771E /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F252AE29E5F0017771E /* Location.swift */; };
 		CE026F2B2AE2AE320017771E /* PublicTransportLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */; };
 		CE026F2D2AE2B2B10017771E /* PublicTransportRouteAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */; };
+		CE423EAE2AF3AABE0027D886 /* routen.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE423EAB2AF3AABE0027D886 /* routen.csv */; };
+		CE423EAF2AF3AABE0027D886 /* haltepunkte.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE423EAC2AF3AABE0027D886 /* haltepunkte.csv */; };
+		CE423EB02AF3AABE0027D886 /* linien.csv in Resources */ = {isa = PBXBuildFile; fileRef = CE423EAD2AF3AABE0027D886 /* linien.csv */; };
+		CE423EB22AF3B9840027D886 /* IntervalTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE423EB12AF3B9840027D886 /* IntervalTimesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		CE026F252AE29E5F0017771E /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportLine.swift; sourceTree = "<group>"; };
 		CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicTransportRouteAssociation.swift; sourceTree = "<group>"; };
+		CE423EAB2AF3AABE0027D886 /* routen.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = routen.csv; sourceTree = "<group>"; };
+		CE423EAC2AF3AABE0027D886 /* haltepunkte.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = haltepunkte.csv; sourceTree = "<group>"; };
+		CE423EAD2AF3AABE0027D886 /* linien.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = linien.csv; sourceTree = "<group>"; };
+		CE423EB12AF3B9840027D886 /* IntervalTimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalTimesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,9 @@
 		CE026F0B2AE29D880017771E /* WienerLinienAbfahrtIOS2 */ = {
 			isa = PBXGroup;
 			children = (
+				CE423EAC2AF3AABE0027D886 /* haltepunkte.csv */,
+				CE423EAD2AF3AABE0027D886 /* linien.csv */,
+				CE423EAB2AF3AABE0027D886 /* routen.csv */,
 				CE026F242AE29E5F0017771E /* LineStopsView.swift */,
 				CE026F252AE29E5F0017771E /* Location.swift */,
 				CE026F232AE29E5F0017771E /* ODPRealtimeAPIClient.swift */,
@@ -73,6 +84,7 @@
 				CE026F122AE29D8A0017771E /* Preview Content */,
 				CE026F2A2AE2AE320017771E /* PublicTransportLine.swift */,
 				CE026F2C2AE2B2B10017771E /* PublicTransportRouteAssociation.swift */,
+				CE423EB12AF3B9840027D886 /* IntervalTimesView.swift */,
 			);
 			path = WienerLinienAbfahrtIOS2;
 			sourceTree = "<group>";
@@ -143,8 +155,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE423EB02AF3AABE0027D886 /* linien.csv in Resources */,
 				CE026F142AE29D8A0017771E /* Preview Assets.xcassets in Resources */,
 				CE026F112AE29D8A0017771E /* Assets.xcassets in Resources */,
+				CE423EAF2AF3AABE0027D886 /* haltepunkte.csv in Resources */,
+				CE423EAE2AF3AABE0027D886 /* routen.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +173,7 @@
 				CE026F2D2AE2B2B10017771E /* PublicTransportRouteAssociation.swift in Sources */,
 				CE026F272AE29E5F0017771E /* ODPRealtimeAPIClient.swift in Sources */,
 				CE026F0F2AE29D880017771E /* ContentView.swift in Sources */,
+				CE423EB22AF3B9840027D886 /* IntervalTimesView.swift in Sources */,
 				CE026F262AE29E5F0017771E /* ODPRealtimeModel.swift in Sources */,
 				CE026F282AE29E5F0017771E /* LineStopsView.swift in Sources */,
 				CE026F292AE29E5F0017771E /* Location.swift in Sources */,

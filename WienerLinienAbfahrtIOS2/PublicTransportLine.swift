@@ -7,7 +7,8 @@
 
 import Foundation
 
-class PublicTransportLine: Identifiable, ObservableObject {
+class PublicTransportLine: Identifiable, ObservableObject, Hashable {
+    
     let id = UUID()
     let lineId: Int
     let name: String
@@ -17,5 +18,13 @@ class PublicTransportLine: Identifiable, ObservableObject {
         self.lineId = lineId
         self.name = name
         self.type = type
+    }
+    
+    static func == (lhs: PublicTransportLine, rhs: PublicTransportLine) -> Bool {
+        return lhs.lineId == rhs.lineId
+    }
+    
+    func hash(into hasher: inout Hasher){
+        hasher.combine(self.lineId);
     }
 }

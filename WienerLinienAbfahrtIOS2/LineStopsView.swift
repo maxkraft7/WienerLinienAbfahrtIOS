@@ -8,14 +8,17 @@ struct LineStopsView: View {
     private let client: ODPRealtimeClient = ODPRealtimeClient()
     
     var body: some View {
-        Map(coordinateRegion: $mapRegion, annotationItems: self.stopLocations) { location in
-            MapMarker(coordinate: location.coordinate)
+        NavigationView {
+            Map(coordinateRegion: $mapRegion, annotationItems: self.stopLocations) { location in
+                
+                // todo switch to other view on click
+                MapMarker(coordinate: location.coordinate)
+            }
+            .onAppear {
+                // Load the data when the view appears
+                self.stopLocations = client.fetchStops()
+            }
         }
-        .onAppear {
-            // Load the data when the view appears
-            
-            self.stopLocations = client.fetchStops()
-            print(self.stopLocations)
-        }
+        
     }
 }
