@@ -12,7 +12,15 @@ struct LineStopsView: View {
             Map(coordinateRegion: $mapRegion, annotationItems: self.stopLocations) { location in
                 
                 // todo switch to other view on click
-                MapMarker(coordinate: location.coordinate)
+                MapAnnotation(coordinate: location.coordinate) {
+                    NavigationLink(destination: IntervalTimesView(stop: location), label: {
+                        Circle()
+                            .stroke(.red, lineWidth: 3)
+                            .frame(width: 44, height: 44)
+                    })
+                }
+                
+                
             }
             .onAppear {
                 // Load the data when the view appears

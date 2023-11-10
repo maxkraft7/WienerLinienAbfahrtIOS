@@ -7,6 +7,13 @@ Base URL:
 
 https://www.wienerlinien.at/ogd_realtime/monitor?activateTrafficInfo=stoerunglang&rbl=4438
 
+## Hinweise zur App
+
+Die App ladet etwas lange, während sie damit beschäftigt ist die CSV-Dateien zu parsen.
+Würde man das in eine Art Localstorage (Core Data o.ä) geben würde das die Performanz bestimmt erhöhen. 
+
+Man könnte auch noch eine Funktionalität einbauen dass alle Linien mit unterschiedlichen Farben angzeigt werden, oder dass die Abfahrten besser ins UI integriert werden. 
+
 
 
 ## Angabe

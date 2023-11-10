@@ -8,24 +8,32 @@ class ODPRealtimeClient {
 
     // example station ids:
     // 4438 - längenfeldgasse
-    func fetchStationDetails(stationId: Int){
+    public static func fetchStationDetails(stationId: Int) -> ODPResponse?{
+        
+        var opdResponse: ODPResponse? = nil;
+        let semaphore = DispatchSemaphore(value: stationId)
+        
         guard let url = URL(string: "https://www.wienerlinien.at/ogd_realtime/monitor?activateTrafficInfo=stoerunglang&rbl=" + String(stationId)) else {
             // todo show error on screen
             print("could not parse url")
-            return
+            return nil;
         }  
 
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
 
             guard let responseData = data else {
                 print("empty response body returned")
-                return
+                return;
             }
 
-            let opdResponse = try? JSONDecoder().decode(ODPResponse.self, from: responseData)
+            opdResponse = try? JSONDecoder().decode(ODPResponse.self, from: responseData)
+            semaphore.signal();
         }
 
         task.resume();
+        semaphore.wait();
+        
+        return opdResponse;
     }
 
     func fetchLines() -> [PublicTransportLine] {
@@ -141,6 +149,7 @@ class ODPRealtimeClient {
             if line?.type != vehicleType{
                 continue
             }
+
             
             if var existingValues = myDictionary[line!] {
                 existingValues.append(stop!)
